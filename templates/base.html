@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'index.css') }}">
+    <title>QRcode</title>
+</head>
+<body>
+   <h1>Welcome to QR code Generator</h1>
+   <h2>To use the generator, enter a url into the text box and press create</h2>
+   <form action="/generate">
+    URL:<input type='text' name='url'><br>
+    <input type='submit' value='Submit'>
+    </form>
+   {% block content %}{% endblock %}
+</body>
+</html>
